@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.1.0"
+    xmlns="http://www.opengis.net/sld"
+    xmlns:ogc="http://www.opengis.net/ogc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
+    <NamedLayer>
+        <Name>YourLayerName</Name>
+        <UserStyle>
+            <Name>YourStyleName</Name>
+            <Title>Dashed Line with Offset and Circles</Title>
+            <FeatureTypeStyle>
+                <Rule>
+                    <MinScaleDenominator>1000</MinScaleDenominator>
+                    <MaxScaleDenominator>5000</MaxScaleDenominator>
+                    <LineSymbolizer>
+                        <Stroke>
+                            <CssParameter name="stroke">#000000</CssParameter> <!-- Black color -->
+                            <CssParameter name="stroke-width">2</CssParameter> <!-- Line width -->
+                            <CssParameter name="stroke-dasharray">5 2</CssParameter> <!-- Dashed pattern -->
+                        </Stroke>
+                        <VendorOption name="displacement">0.5</VendorOption> <!-- Offset -->
+                    </LineSymbolizer>
+                    <PointSymbolizer>
+                        <Graphic>
+                            <Mark>
+                                <WellKnownName>circle</WellKnownName>
+                                <Fill>
+                                    <CssParameter name="fill">#000000</CssParameter> <!-- Black color -->
+                                </Fill>
+                            </Mark>
+                            <Size>10</Size> <!-- Circle radius -->
+                        </Graphic>
+                    </PointSymbolizer>
+                </Rule>
+            </FeatureTypeStyle>
+        </UserStyle>
+    </NamedLayer>
+</StyledLayerDescriptor>
